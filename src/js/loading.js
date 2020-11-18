@@ -2,7 +2,7 @@
 const $ = window.jQuery;
 
 window.initLoading = function(element = '[data-container="loading"]') {
-    $(element).html(`
+  $(element).html(`
       <div class="loading-container fixed">
           <div class="lds-roller">
               <div></div>
@@ -15,5 +15,5 @@ window.initLoading = function(element = '[data-container="loading"]') {
 };
 
 window.finishLoading = function(element = '[data-container="loading"]') {
-    $(element).html("");
+  $(element).html("");
 };
