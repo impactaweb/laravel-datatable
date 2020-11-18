@@ -77,6 +77,7 @@ class DatatableServiceProvider extends ServiceProvider
             $orderDir = Str::upper($request->get('dir'));
             $orderBy = $request->get('ord');
             if (in_array($orderBy, $orderable)) {
+                $builder->getQuery()->orders = null;
                 $builder->orderBy($orderBy, $orderDir);
             }
 
