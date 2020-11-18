@@ -6,7 +6,7 @@ namespace Impactaweb\Listing;
 
 use Illuminate\Support\Facades\Request;
 
-trait ListingActions
+trait DatatableActions
 {
     public $actions = [];
 

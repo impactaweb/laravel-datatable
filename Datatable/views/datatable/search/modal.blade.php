@@ -10,7 +10,7 @@
                     </button>
                 </div>
                 <div class="modal-body" style="max-height: 450px; overflow-y: scroll;">
-                    @include('listing.search.filters', ['listing' => $listing])
+                    @include('listing.search.filters', ['data' => $data])
                 </div>
                 <div class="modal-footer">
                     <a href="{{ request()->url() }}"

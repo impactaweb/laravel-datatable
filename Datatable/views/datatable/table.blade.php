@@ -25,15 +25,15 @@
        data-redir="">
     <thead>
     <tr>
-        @if($listing["checkbox"] ?? true)
+        @if($data["checkbox"] ?? true)
             <th scope="col" class="border-top-0">
                 <input type="checkbox" name="checkbox-listing">
             </th>
         @endif
 
-        @foreach($listing["columns"] ?? [] as $field => $label)
+        @foreach($data["columns"] ?? [] as $field => $label)
             <th scope="col" class="border-top-0">
-                @if(in_array($field, $listing["orderable"] ?? []))
+                @if(in_array($field, $data["orderable"] ?? []))
                     <a class="text-primary {{getOrder($field)}}"
                        onclick='setOrder("{{$field}}")'
                        href="javascript:;">
@@ -48,16 +48,16 @@
     </thead>
 
     <tbody>
-    @foreach($listing["data"] ?? [] as $row)
+    @foreach($data["data"] ?? [] as $row)
         <tr>
-            @if($listing["checkbox"] ?? true)
+            @if($data["checkbox"] ?? true)
                 <td>
                     <input type="checkbox" name="item[]" class="listing-checkboxes"
-                           value="{{$row[$listing['pk'] ?? ''] ?? ''}}">
+                           value="{{$row[$data['pk'] ?? ''] ?? ''}}">
                 </td>
             @endif
-            @foreach($listing["columns"] ?? [] as $field => $label)
-                <td>{!! getRow($row, $field, $listing["map"] ?? []) !!}</td>
+            @foreach($data["columns"] ?? [] as $field => $label)
+                <td>{!! getRow($row, $field, $data["map"] ?? []) !!}</td>
             @endforeach
         </tr>
     @endforeach

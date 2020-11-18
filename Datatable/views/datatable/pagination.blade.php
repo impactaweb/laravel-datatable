@@ -1,27 +1,27 @@
-@if(!empty($listing["data"]))
+@if(!empty($data["data"]))
     <div class="form-row float-md-left align-items-center">
         <label class="col-md-auto col-form-label">Por página:</label>
         <div class="col-auto pl-0">
             <input
                 type="number"
-                value="{{ $listing["pagination"]['per_page'] }}"
+                value="{{ $data["pagination"]['per_page'] }}"
                 class="form-control"
                 name="per_page"
                 onchange="setQs('per_page', event.target.value)"
                 min="1"
-                max="{{ $listing['pagination']['total'] }}"
+                max="{{ $data['pagination']['total'] }}"
             >
         </div>
 
         <div class="col-auto data-listagem">
             <strong>
-                {{ $listing['pagination']['from'] . ' - ' . $listing['pagination']['to'] }}
+                {{ $data['pagination']['from'] . ' - ' . $data['pagination']['to'] }}
             </strong> de <strong>
-                {{ $listing['pagination']['total'] }}
+                {{ $data['pagination']['total'] }}
             </strong>
             (<strong>
-                {{ $listing['pagination']['total_pages'] }}
-            </strong> página{{ $listing['pagination']['total_pages'] > 1 ? 's' : '' }})
+                {{ $data['pagination']['total_pages'] }}
+            </strong> página{{ $data['pagination']['total_pages'] > 1 ? 's' : '' }})
         </div>
     </div>
 
@@ -34,15 +34,15 @@
                 class="form-control"
                 name="page"
                 onchange="setQs('page', event.target.value)"
-                value="{{ $listing['pagination']['current_page'] }}"
+                value="{{ $data['pagination']['current_page'] }}"
                 min="1"
-                max="{{ $listing['pagination']['last_page'] }}"
+                max="{{ $data['pagination']['last_page'] }}"
             />
         </div>
         <div class="col-auto">
-            @if($listing['pagination']['current_page'] != 1)
+            @if($data['pagination']['current_page'] != 1)
                 <a href="javascript:;" class="btn btn-default"
-                   onclick="previousPage({{$listing['pagination']['current_page']}})">
+                   onclick="previousPage({{$data['pagination']['current_page']}})">
                     <i class="fas fa-chevron-left"></i>
                 </a>
             @else
@@ -51,9 +51,9 @@
                 </a>
             @endif
 
-            @if($listing['pagination']['current_page'] != $listing['pagination']['last_page'])
+            @if($data['pagination']['current_page'] != $data['pagination']['last_page'])
                 <a href="javascript:;" class="btn btn-default"
-                   onclick="nextPage({{$listing['pagination']['current_page']}})">
+                   onclick="nextPage({{$data['pagination']['current_page']}})">
                     <i class="fas fa-chevron-right"></i>
                 </a>
             @else

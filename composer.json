@@ -13,25 +13,18 @@
   ],
   "autoload": {
     "psr-4": {
-      "Impactaweb\\Listing\\": "Listing/"
+      "Impactaweb\\Datatable\\": "Datatable/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Impactaweb\\Listing\\ListingServiceProvider"
+        "Impactaweb\\Datatable\\DatatableServiceProvider"
       ]
     }
   },
   "require": {
-    "impactaweb/eloquent-search": "dev-master",
     "php": "^7.2",
     "laravel/framework": "^6.2"
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:jacksonpm/eloquent-search.git"
-    }
-  ]
+  }
 }

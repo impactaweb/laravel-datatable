@@ -1,7 +1,7 @@
-@if(!empty($listing['actions']))
+@if(!empty($data['actions']))
     @include('listing::confirmation-modal')
     <div class="col">
-        @foreach($listing['actions'] as $type => $actions)
+        @foreach($data['actions'] as $type => $actions)
             <button type="button" class="btn btn-lg btn-default tooltips actionButton"
                     data-name="{{ $type }}"
                     data-url="{{ $actions['url'] }}"

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Impactaweb\Listing;
+namespace Impactaweb\Datatable;
 
 
-class Listing extends ListingApi
+class Datatable extends DatatableApi
 {
-    use ListingActions;
+    use DatatableActions;
 
     public $showCheckbox = true;
     public $columns = [];

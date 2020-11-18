@@ -16,7 +16,7 @@
                             <i class="fas fa-search"></i>
                         </span>
                     </button>
-                    @if(!empty($listing['searchable']) || !empty($listing['filters']))
+                    @if(!empty($data['searchable']) || !empty($data['filters']))
                         <div class="btn-group" role="group">
                             <button id="buscaAvancadaBtn"
                                     type="button"

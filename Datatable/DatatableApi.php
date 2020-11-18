@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Impactaweb\Listing;
+namespace Impactaweb\Datatable;
 
 
-class ListingApi
+class DatatableApi
 {
     public $pk = '';
     public $orderable = [];

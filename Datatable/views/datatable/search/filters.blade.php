@@ -1,4 +1,4 @@
-@foreach($listing['filters'] ?? [] as $filter)
+@foreach($data['filters'] ?? [] as $filter)
     @if(is_array($filter['operator']))
         <div class="row mb-3">
             <div class="col-md-3 d-inline-flex">
@@ -12,7 +12,7 @@
                 @endif
             </div>
             <div class="col-md-4">
-                @include('listing.search.filter-operators-select', ['listing' => $listing, 'filter' => $filter])
+                @include('listing.search.filter-operators-select', ['data' => $data, 'filter' => $filter])
             </div>
             <div class="col-md-5">
                 @if(Str::upper($filter['type'])  == 'SELECT')

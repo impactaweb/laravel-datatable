@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 
-class ListingServiceProvider extends ServiceProvider
+class DatatableServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -31,13 +31,13 @@ class ListingServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/config/datatable.php', 'datatable');
 
         // Views
-        $this->loadViewsFrom(__DIR__ . '/views', 'listing');
+        $this->loadViewsFrom(__DIR__ . '/views', 'datatable');
 
         // Publish config
         $this->publishes([__DIR__ . '/config/datatable.php' => config_path('datatable.php'),], 'config');
 
         // Publish Views
-        $this->publishes([__DIR__ . '/views' => resource_path('views/vendor/impactaweb/listing'),], 'views');
+        $this->publishes([__DIR__ . '/Datatable/views/datatable' => resource_path('views/vendor/impactaweb/datatable'),], 'views');
 
         // Builder
         Builder::macro('toListing', function (Request $request, array $listingData) {
