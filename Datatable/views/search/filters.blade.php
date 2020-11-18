@@ -4,7 +4,7 @@
             <div class="col-md-3 d-inline-flex">
                 @include('datatable::search.filter-item-label', ['filter' => $filter])
                 @if($filter['help'])
-                    <img src="/vendor/impactaweb/crud/form/tooltip.png"
+                    <img src="/vendor/impactaweb/datatable/img/tooltip.png"
                          alt="tooltip" data-toggle="tooltip"
                          data-placement="top" class="mt-2 tooltip-icon"
                          title=""
