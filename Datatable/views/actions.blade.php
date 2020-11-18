@@ -1,5 +1,5 @@
 @if(!empty($data['actions']))
-    @include('listing::confirmation-modal')
+    @include('datatable::confirmation')
     <div class="col">
         @foreach($data['actions'] as $type => $actions)
             <button type="button" class="btn btn-lg btn-default tooltips actionButton"

@@ -1,15 +1,15 @@
 <div data-container="loading"></div>
 <div class="corpo-listing" data-query-separator="{{ $data['query_separator'] }}" id="psListing">
     <div class="header row">
-        @include('listing.actions', ['data' => $data])
+        @include('datatable::actions', ['data' => $data])
         <div class="col">
-            @include('listing.basic-search', ['data' => $data])
-            @include('listing.search.modal', ['data' => $data])
+            @include('datatable::basic-search', ['data' => $data])
+            @include('datatable::search.modal', ['data' => $data])
         </div>
     </div>
 
-    @include('listing.table', ['data' => $data])
-    @include('listing.pagination', ['data' => $data])
+    @include('datatable::table', ['data' => $data])
+    @include('datatable::pagination', ['data' => $data])
 </div>
 
 
