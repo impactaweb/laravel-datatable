@@ -37,7 +37,7 @@ class DatatableServiceProvider extends ServiceProvider
         $this->publishes([__DIR__ . '/config/datatable.php' => config_path('datatable.php'),], 'config');
 
         // Publish src (static)
-        $this->publishes([dirname(__DIR__) . '/src' => public_path('vendor/impactaweb/datatable'),], 'public');
+        $this->publishes([dirname(__DIR__) . '/dist' => public_path('vendor/impactaweb/datatable'),], 'public');
 
         // Builder
         Builder::macro('toListing', function (Request $request, array $listingData) {
