@@ -7,7 +7,11 @@
             @include('datatable::search.modal', ['data' => $data])
         </div>
     </div>
-
+    <form id="listingForm" action="" method="POST" style="display:none">
+        {{ csrf_field() }}
+        <input type="hidden" name="_method" value="">
+        <button type="submit"></button>
+    </form>
     @include('datatable::table', ['data' => $data])
     @include('datatable::pagination', ['data' => $data])
 </div>
