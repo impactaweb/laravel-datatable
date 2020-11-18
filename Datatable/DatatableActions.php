@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Impactaweb\Listing;
+namespace Impactaweb\Datatable;
 
 
 use Illuminate\Support\Facades\Request;

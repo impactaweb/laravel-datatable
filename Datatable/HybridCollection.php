@@ -1,6 +1,6 @@
 <?php
 
-namespace Impactaweb\Listing;
+namespace Impactaweb\Datatable;
 
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
