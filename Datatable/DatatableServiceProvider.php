@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Impactaweb\Listing;
+namespace Impactaweb\Datatable;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
