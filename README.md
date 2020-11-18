@@ -36,6 +36,8 @@ And publish vendor files:
 Let's start with a basic example, you supposedly need to create a Clients datatable.
 The flow to generate a hybrid response will be like this:
 
+![alt text](https://i.ibb.co/KFvpWcZ/Screenshot.png)
+
 ### The Collection
 
 ```php
