@@ -1,6 +1,6 @@
 <div class="modal fade show" id="modalBuscaAvancada" tabindex="-1" role="dialog"
      aria-labelledby="modalBuscaAvancadaLabel" aria-modal="true">
-    <div class="modal-dialog modal-md" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <form action="" method="get" class="frmBuscaAvancada" id="formBuscaAvacada">
                 <div class="modal-header">

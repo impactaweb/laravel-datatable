@@ -6,7 +6,7 @@ namespace Impactaweb\Datatable;
 
 class DatatableApi
 {
-    public $pk = '';
+    public $pk = 'id';
     public $orderable = [];
     public $filters = [];
     public $searchable;

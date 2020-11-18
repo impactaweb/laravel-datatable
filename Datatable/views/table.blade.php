@@ -61,5 +61,10 @@
             @endforeach
         </tr>
     @endforeach
+    @if(empty($data['data']))
+        <tr class="empty">
+            <td colspan="100%">Nenhum item encontrado</td>
+        </tr>
+    @endif
     </tbody>
 </table><?php
