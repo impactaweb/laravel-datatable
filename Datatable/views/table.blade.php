@@ -1,21 +1,26 @@
 @php
 
-    function getRow($row, $field, $map) {
-        if (isset($map[$field])) {
-            return $map[$field]($row);
+    if (!function_exists('getRow')) {
+        function getRow($row, $field, $map) {
+            if (isset($map[$field])) {
+                return $map[$field]($row);
+            }
+            return $row[$field];
         }
-        return $row[$field];
     }
 
-    function getOrder($field) {
-        $request = request();
-        $currentOrder = $request->get('ord', '');
-        $currentDir = mb_strtoupper($request->get('dir', ''));
-        if ($field != $currentOrder) {
-            return null;
-        }
 
-        return $currentDir === 'ASC' ? 'order-desc' : 'order-asc';
+    if (!function_exists('getOrder')) {
+        function getOrder($field) {
+            $request = request();
+            $currentOrder = $request->get('ord', '');
+            $currentDir = mb_strtoupper($request->get('dir', ''));
+            if ($field != $currentOrder) {
+                return null;
+            }
+
+            return $currentDir === 'ASC' ? 'order-desc' : 'order-asc';
+        }
     }
 
 @endphp
