@@ -37,8 +37,9 @@
     }
 
     function setFilter(value, field) {
+        let separator = $('#psListing').data('query-separator') || '__'
         let column = $(field).data('column')
-        let newName = column + '__' + value
+        let newName = column + separator + value
         $(field).attr('name', newName)
     }
 
