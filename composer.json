@@ -22,9 +22,5 @@
         "Impactaweb\\Datatable\\DatatableServiceProvider"
       ]
     }
-  },
-  "require": {
-    "php": "^7.2",
-    "laravel/framework": "^6.2"
   }
 }
