@@ -50,12 +50,13 @@ class HybridCollection extends ResourceCollection
         return array_merge(['data' => $resourceData, 'pagination' => $paginationData], $listingData);
     }
 
-    public static function getApiResponse(Builder $data, $listing): JsonResponse
+    public static function getApiResponse(Builder $data, $listing, array $aditional = []): JsonResponse
     {
+        $aditional = array_merge($aditional, $listing->toMeta());
         $request = request();
         $source = $data->toListing($request, $listing->toMeta());
         return self::make($source)
-            ->additional($listing->toMeta())
+            ->additional($aditional)
             ->toResponse($request);
     }
 }
