@@ -31,7 +31,7 @@
     <thead>
     <tr>
         @if($data["checkbox"] ?? true)
-            <th scope="col" class="border-top-0">
+            <th scope="col" id="datatable-col-checkbox" class="border-top-0">
                 <input type="checkbox" name="checkbox-listing">
             </th>
         @endif
@@ -67,7 +67,7 @@
         </tr>
     @endforeach
     @if(empty($data['data']))
-        <tr class="empty">
+        <tr class="empty" id="datatable-empty-results">
             <td colspan="100%">Nenhum item encontrado</td>
         </tr>
     @endif
