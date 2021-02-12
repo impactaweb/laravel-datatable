@@ -1,6 +1,6 @@
 <div data-container="loading"></div>
 <div class="corpo-listing" data-query-separator="{{ $data['query_separator'] }}" id="psListing">
-    <div class="header row">
+    <div class="header row" id="datatable-actions">
         @include('datatable::actions', ['data' => $data])
         <div class="col">
             @include('datatable::basic-search', ['data' => $data])
